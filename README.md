@@ -1,4 +1,4 @@
-# typing-speed-checker
+# RapidKeys
 A simple and interactive Typing Speed Checker that measures your typing performance in terms of Words Per Minute (WPM), accuracy and timer.
 
 🚀 Features
