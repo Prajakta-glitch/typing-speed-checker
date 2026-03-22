@@ -15,7 +15,3 @@ A simple and interactive Typing Speed Checker that measures your typing performa
 - HTML
 - CSS
 - React
-
-🚧 Project Status
-- Deployment Coming Soon!
-This project is currently under development. The web version is not live yet, but it will be available soon.
