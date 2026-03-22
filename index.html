@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidKeys</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="label">type / speed / test</div>
+  <h1>RapidKeys</h1>
+
+  <div class="stats">
+    <div class="stat-card orange">
+      <div class="card-value" id="wpm-display">0</div>
+      <div class="card-label">wpm</div>
+    </div>
+    <div class="stat-card blue">
+      <div class="card-value" id="acc-display">100%</div>
+      <div class="card-label">accuracy</div>
+    </div>
+    <div class="stat-card green">
+      <div class="card-value" id="time-display">60s</div>
+      <div class="card-label">time</div>
+    </div>
+  </div>
+
+  <div class="progress-track">
+    <div class="progress-fill" id="progress"></div>
+  </div>
+
+  <div class="text-display" id="text-display" onclick="document.getElementById('input').focus()">
+    <div class="hint" id="hint">click here or start typing</div>
+    <div id="text-chars"></div>
+  </div>
+
+  <textarea
+    id="input"
+    placeholder="start typing to begin the test..."
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+  ></textarea>
+
+  <div class="buttons" id="action-btns">
+    <button class="btn btn-gray" onclick="restart()">new text</button>
+    <button class="btn btn-blue" onclick="window.location.href='difficulty.html'">change level</button>
+    <button class="btn btn-orange" id="stop-btn" onclick="endTest()" style="display:none">stop</button>
+  </div>
+
+  <div class="result-card" id="result-card">
+    <div style="font-size:10px;letter-spacing:0.2em;color:#444;text-transform:uppercase;margin-bottom:6px">your result</div>
+    <div class="result-wpm" id="result-wpm">0 <span>wpm</span></div>
+    <div class="result-grid">
+      <div class="result-grid-item"><div class="val" id="res-acc">-</div><div class="lbl">accuracy</div></div>
+      <div class="result-grid-item"><div class="val" id="res-correct">-</div><div class="lbl">correct chars</div></div>
+      <div class="result-grid-item"><div class="val" id="res-total">-</div><div class="lbl">total chars</div></div>
+    </div>
+    <div class="result-msg" id="result-msg"></div>
+    <div class="buttons" style="position:relative">
+      <button class="btn btn-green" onclick="restart()">try again</button>
+      <button class="btn btn-blue"  onclick="window.location.href='difficulty.html'">change level</button>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
